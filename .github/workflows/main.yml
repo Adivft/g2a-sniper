@@ -1,0 +1,11 @@
+name: G2A Sniper
+on:
+  schedule:
+    - cron: '*/15 * * * *' # Har 15 minute mein chalega
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Sniper
+        run: python main.py
